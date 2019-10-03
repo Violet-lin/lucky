@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<form>
+  <div class="form-group">
+    <label for="inputsm">Input your strings</label>
+    <input class="form-control input-sm col-sm-4" id="inputsm" type="text">
+  </div>
+</form>
+<p><button onclick="stage1()">Try it</button></p>
+<div id="output"></div>
+<script>
+function stage1(){
+  var number = inputsm.value,
+      output = [],
+      sNumber = number.toString();
+
+  for (var i = 0, len = sNumber.length; i < len; i += 1) {
+      output.push(+sNumber.charAt(i));
+  }
+
+  console.log(inputsm.value);
+  for (var i = 0, sum = 0; i < output.length; sum += output[i++]);
+  console.log(sum);
+  document.getElementById("output").innerHTML=sum;
+  // console.log(sum+8);
+}
+
+</script>
+
+</body>
+
+</html>
